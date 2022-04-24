@@ -31,11 +31,11 @@ namespace Stock_Control_Manager
             Random rndm = new Random();
             return rndm.Next(100000, 1000000);
         }
-        public void listAll(string query, DataGridView grid) // spesifik bir datagrid'e veri yüklemek için.
+        public void listAll(string query, DataGridView grid) // spesifik bir datagrid'e veri yüklemek için...
         {
             sqlcon CONNECT = new sqlcon();
             DataTable DT = new DataTable();
-            SqlDataAdapter DA = new SqlDataAdapter("select * from TBL_PRODUCTS", CONNECT.connection());
+            SqlDataAdapter DA = new SqlDataAdapter("select * from TBL_PRODUCTS", CONNECT.connection()); 
             DA.Fill(DT);
             grid.DataSource = DT;
         }
