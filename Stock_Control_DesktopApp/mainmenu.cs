@@ -8,19 +8,47 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-//
+
+// Neccecerys
+using Stock_Control_DesktopApp.AllChildPanels;
+using System.Data.SqlClient;
 
 
 namespace Stock_Control_DesktopApp
 {
     public partial class mainmenu : Form
     {
+        product PRDCT;
+
         public mainmenu()
         {
             InitializeComponent();
         }
+    
+        private void prdctBTN_Click(object sender, EventArgs e)
+        {
+            monitorPanel.Controls.Clear();
+            PRDCT = new product();
+            PRDCT.TopLevel = false;
+            monitorPanel.Controls.Add(PRDCT);
+            PRDCT.Show();
+        }
 
-        protected override void WndProc(ref Message m)
+        private void exitBTN_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+    }
+}
+
+
+
+
+
+
+
+/*
+  protected override void WndProc(ref Message m)
         {
             base.WndProc(ref m);
             if (m.Msg == WM_NCHITTEST)
@@ -29,10 +57,5 @@ namespace Stock_Control_DesktopApp
         private const int WM_NCHITTEST = 0x84;
         private const int HT_CLIENT = 0x1;
         private const int HT_CAPTION = 0x2;
-
-        private void prdctBTN_Click(object sender, EventArgs e)
-        {
-
-        }
-    }
-}  
+ 
+ */

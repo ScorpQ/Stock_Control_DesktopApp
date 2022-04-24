@@ -31,37 +31,37 @@ namespace Stock_Control_DesktopApp
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainmenu));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button13 = new System.Windows.Forms.Button();
+            this.exitBTN = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.bookBTN = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.frmBTN = new System.Windows.Forms.Button();
+            this.cstrmBTN = new System.Windows.Forms.Button();
+            this.staffBTN = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.prdctBTN = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.monitorPanel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(10)))), ((int)(((byte)(30)))));
-            this.panel1.Controls.Add(this.button13);
+            this.panel1.Controls.Add(this.exitBTN);
             this.panel1.Controls.Add(this.button12);
             this.panel1.Controls.Add(this.button9);
             this.panel1.Controls.Add(this.button11);
-            this.panel1.Controls.Add(this.button10);
+            this.panel1.Controls.Add(this.bookBTN);
             this.panel1.Controls.Add(this.button8);
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.frmBTN);
+            this.panel1.Controls.Add(this.cstrmBTN);
+            this.panel1.Controls.Add(this.staffBTN);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.prdctBTN);
             this.panel1.Location = new System.Drawing.Point(1, 1);
@@ -69,20 +69,21 @@ namespace Stock_Control_DesktopApp
             this.panel1.Size = new System.Drawing.Size(1862, 113);
             this.panel1.TabIndex = 0;
             // 
-            // button13
+            // exitBTN
             // 
-            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(70)))));
-            this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button13.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.button13.Image = ((System.Drawing.Image)(resources.GetObject("button13.Image")));
-            this.button13.Location = new System.Drawing.Point(1756, 4);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(101, 50);
-            this.button13.TabIndex = 13;
-            this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button13.UseVisualStyleBackColor = false;
+            this.exitBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(70)))));
+            this.exitBTN.FlatAppearance.BorderSize = 0;
+            this.exitBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.exitBTN.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.exitBTN.Image = ((System.Drawing.Image)(resources.GetObject("exitBTN.Image")));
+            this.exitBTN.Location = new System.Drawing.Point(1756, 4);
+            this.exitBTN.Name = "exitBTN";
+            this.exitBTN.Size = new System.Drawing.Size(101, 50);
+            this.exitBTN.TabIndex = 13;
+            this.exitBTN.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.exitBTN.UseVisualStyleBackColor = false;
+            this.exitBTN.Click += new System.EventHandler(this.exitBTN_Click);
             // 
             // button12
             // 
@@ -134,22 +135,22 @@ namespace Stock_Control_DesktopApp
             this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button11.UseVisualStyleBackColor = false;
             // 
-            // button10
+            // bookBTN
             // 
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(70)))));
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button10.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.Location = new System.Drawing.Point(1445, 3);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(152, 107);
-            this.button10.TabIndex = 10;
-            this.button10.Text = "Rehber";
-            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button10.UseVisualStyleBackColor = false;
+            this.bookBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(70)))));
+            this.bookBTN.FlatAppearance.BorderSize = 0;
+            this.bookBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bookBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bookBTN.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.bookBTN.Image = ((System.Drawing.Image)(resources.GetObject("bookBTN.Image")));
+            this.bookBTN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bookBTN.Location = new System.Drawing.Point(1445, 3);
+            this.bookBTN.Name = "bookBTN";
+            this.bookBTN.Size = new System.Drawing.Size(152, 107);
+            this.bookBTN.TabIndex = 10;
+            this.bookBTN.Text = "Rehber";
+            this.bookBTN.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bookBTN.UseVisualStyleBackColor = false;
             // 
             // button8
             // 
@@ -205,60 +206,60 @@ namespace Stock_Control_DesktopApp
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button6.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // frmBTN
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(70)))));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button5.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.Location = new System.Drawing.Point(649, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(152, 107);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Firma";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = false;
+            this.frmBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(70)))));
+            this.frmBTN.FlatAppearance.BorderSize = 0;
+            this.frmBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.frmBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.frmBTN.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.frmBTN.Image = ((System.Drawing.Image)(resources.GetObject("frmBTN.Image")));
+            this.frmBTN.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.frmBTN.Location = new System.Drawing.Point(649, 2);
+            this.frmBTN.Name = "frmBTN";
+            this.frmBTN.Size = new System.Drawing.Size(152, 107);
+            this.frmBTN.TabIndex = 5;
+            this.frmBTN.Text = "Firma";
+            this.frmBTN.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.frmBTN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.frmBTN.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // cstrmBTN
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(70)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button4.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.Location = new System.Drawing.Point(313, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(165, 107);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Müşteri";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = false;
+            this.cstrmBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(70)))));
+            this.cstrmBTN.FlatAppearance.BorderSize = 0;
+            this.cstrmBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cstrmBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cstrmBTN.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.cstrmBTN.Image = ((System.Drawing.Image)(resources.GetObject("cstrmBTN.Image")));
+            this.cstrmBTN.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cstrmBTN.Location = new System.Drawing.Point(313, 3);
+            this.cstrmBTN.Name = "cstrmBTN";
+            this.cstrmBTN.Size = new System.Drawing.Size(165, 107);
+            this.cstrmBTN.TabIndex = 4;
+            this.cstrmBTN.Text = "Müşteri";
+            this.cstrmBTN.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cstrmBTN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.cstrmBTN.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // staffBTN
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(70)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button3.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(481, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(165, 107);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Personel";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseCompatibleTextRendering = true;
-            this.button3.UseVisualStyleBackColor = false;
+            this.staffBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(70)))));
+            this.staffBTN.FlatAppearance.BorderSize = 0;
+            this.staffBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.staffBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.staffBTN.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.staffBTN.Image = ((System.Drawing.Image)(resources.GetObject("staffBTN.Image")));
+            this.staffBTN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.staffBTN.Location = new System.Drawing.Point(481, 3);
+            this.staffBTN.Name = "staffBTN";
+            this.staffBTN.Size = new System.Drawing.Size(165, 107);
+            this.staffBTN.TabIndex = 3;
+            this.staffBTN.Text = "Personel";
+            this.staffBTN.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.staffBTN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.staffBTN.UseCompatibleTextRendering = true;
+            this.staffBTN.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
@@ -296,13 +297,13 @@ namespace Stock_Control_DesktopApp
             this.prdctBTN.UseVisualStyleBackColor = false;
             this.prdctBTN.Click += new System.EventHandler(this.prdctBTN_Click);
             // 
-            // panel3
+            // monitorPanel
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel3.Location = new System.Drawing.Point(1, 115);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1862, 884);
-            this.panel3.TabIndex = 3;
+            this.monitorPanel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.monitorPanel.Location = new System.Drawing.Point(1, 115);
+            this.monitorPanel.Name = "monitorPanel";
+            this.monitorPanel.Size = new System.Drawing.Size(1862, 884);
+            this.monitorPanel.TabIndex = 3;
             // 
             // mainmenu
             // 
@@ -310,7 +311,7 @@ namespace Stock_Control_DesktopApp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1864, 1000);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.monitorPanel);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -327,17 +328,17 @@ namespace Stock_Control_DesktopApp
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button prdctBTN;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button staffBTN;
+        private System.Windows.Forms.Button cstrmBTN;
+        private System.Windows.Forms.Button frmBTN;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button bookBTN;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Panel monitorPanel;
+        private System.Windows.Forms.Button exitBTN;
     }
 }
