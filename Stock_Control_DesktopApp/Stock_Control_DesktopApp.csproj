@@ -46,11 +46,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AllChildPanels\junk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllChildPanels\junk.Designer.cs">
+      <DependentUpon>junk.cs</DependentUpon>
+    </Compile>
     <Compile Include="AllChildPanels\product.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AllChildPanels\product.Designer.cs">
       <DependentUpon>product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBbusinessDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBbusinessDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="funcBase.cs" />
     <Compile Include="mainmenu.cs">
@@ -62,6 +73,9 @@
     <Compile Include="Others\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sqlcon.cs" />
+    <EmbeddedResource Include="AllChildPanels\junk.resx">
+      <DependentUpon>junk.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AllChildPanels\product.resx">
       <DependentUpon>product.cs</DependentUpon>
     </EmbeddedResource>
@@ -77,6 +91,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="app.config" />
+    <None Include="DBbusinessDataSet.xsc">
+      <DependentUpon>DBbusinessDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DBbusinessDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBbusinessDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBbusinessDataSet.xss">
+      <DependentUpon>DBbusinessDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

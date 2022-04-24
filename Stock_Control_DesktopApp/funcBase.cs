@@ -15,7 +15,7 @@ namespace Stock_Control_Manager
     class funcBase
     {
 
-        public string generatePID()  //Ürünler için
+        public string generatePID()  // Ürünler için.
         {
             Random rndm = new Random();
             int randomNum = rndm.Next(999999, 9999999);
@@ -26,20 +26,20 @@ namespace Stock_Control_Manager
             return collection[index] + randomNum.ToString();
         }
 
-        public int generateCID() // Müşteriler,Personeller, Firmalar için
+        public int generateCID() // Müşteriler,Personeller, Firmalar için.
         {
             Random rndm = new Random();
             return rndm.Next(100000, 1000000);
         }
-
-        public void listAll(string query,DataGridView grid)
+        public void listAll(string query, DataGridView grid) // spesifik bir datagrid'e veri yüklemek için.
         {
             sqlcon CONNECT = new sqlcon();
-            SqlDataAdapter DA = new SqlDataAdapter(query,CONNECT.connection());
             DataTable DT = new DataTable();
+            SqlDataAdapter DA = new SqlDataAdapter("select * from TBL_PRODUCTS", CONNECT.connection());
             DA.Fill(DT);
-            grid.DataSource = DT; 
+            grid.DataSource = DT;
         }
+
 
     }
 }
