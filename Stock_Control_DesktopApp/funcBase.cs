@@ -1,8 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data.SqlClient;
+using Stock_Control_DesktopApp;
 
 namespace Stock_Control_Manager
 {
@@ -24,6 +30,15 @@ namespace Stock_Control_Manager
         {
             Random rndm = new Random();
             return rndm.Next(100000, 1000000);
+        }
+
+        public void listAll(string query,DataGridView grid)
+        {
+            sqlcon CONNECT = new sqlcon();
+            SqlDataAdapter DA = new SqlDataAdapter(query,CONNECT.connection());
+            DataTable DT = new DataTable();
+            DA.Fill(DT);
+            grid.DataSource = DT; 
         }
 
     }
