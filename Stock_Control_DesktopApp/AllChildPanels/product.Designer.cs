@@ -34,9 +34,25 @@ namespace Stock_Control_DesktopApp.AllChildPanels
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pRODUCTNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pRODUCTBRANDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mODELDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.yEARDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sTOCKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bUYPRİCEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sELLPRİCEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dETAILDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tBLPRODUCTSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dBbusinessDataSet = new Stock_Control_DesktopApp.DBbusinessDataSet();
+            this.tBL_PRODUCTSTableAdapter = new Stock_Control_DesktopApp.DBbusinessDataSetTableAdapters.TBL_PRODUCTSTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dltBTN = new System.Windows.Forms.Button();
             this.idkeeper = new System.Windows.Forms.Label();
+            this.updtBTN = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
+            this.addBTN = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.richDSCRB = new System.Windows.Forms.RichTextBox();
             this.numQUANTITY = new System.Windows.Forms.NumericUpDown();
@@ -53,234 +69,12 @@ namespace Stock_Control_DesktopApp.AllChildPanels
             this.txtNAME = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pRODUCTNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pRODUCTBRANDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mODELDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.yEARDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sTOCKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bUYPRİCEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sELLPRİCEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dETAILDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tBLPRODUCTSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dBbusinessDataSet = new Stock_Control_DesktopApp.DBbusinessDataSet();
-            this.tBL_PRODUCTSTableAdapter = new Stock_Control_DesktopApp.DBbusinessDataSetTableAdapters.TBL_PRODUCTSTableAdapter();
-            this.addBTN = new System.Windows.Forms.Button();
-            this.updtBTN = new System.Windows.Forms.Button();
-            this.dltBTN = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numQUANTITY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLPRODUCTSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBbusinessDataSet)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numQUANTITY)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.panel1.Controls.Add(this.dltBTN);
-            this.panel1.Controls.Add(this.idkeeper);
-            this.panel1.Controls.Add(this.updtBTN);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.addBTN);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.richDSCRB);
-            this.panel1.Controls.Add(this.numQUANTITY);
-            this.panel1.Controls.Add(this.msktxtYEAR);
-            this.panel1.Controls.Add(this.txtSELL);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.txtBUY);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.txtMODEL);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.txtBRAND);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.txtNAME);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(1465, 1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(395, 881);
-            this.panel1.TabIndex = 1;
-            // 
-            // idkeeper
-            // 
-            this.idkeeper.AutoSize = true;
-            this.idkeeper.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.idkeeper.Location = new System.Drawing.Point(312, 0);
-            this.idkeeper.Name = "idkeeper";
-            this.idkeeper.Size = new System.Drawing.Size(80, 19);
-            this.idkeeper.TabIndex = 20;
-            this.idkeeper.Text = "idkeeper";
-            this.idkeeper.Visible = false;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label10.Location = new System.Drawing.Point(91, 261);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(83, 29);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "Adet:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(21, 425);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(100, 29);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "Detay:";
-            // 
-            // richDSCRB
-            // 
-            this.richDSCRB.BackColor = System.Drawing.Color.Lavender;
-            this.richDSCRB.Location = new System.Drawing.Point(17, 457);
-            this.richDSCRB.Name = "richDSCRB";
-            this.richDSCRB.Size = new System.Drawing.Size(368, 181);
-            this.richDSCRB.TabIndex = 16;
-            this.richDSCRB.Text = "";
-            // 
-            // numQUANTITY
-            // 
-            this.numQUANTITY.BackColor = System.Drawing.Color.Lavender;
-            this.numQUANTITY.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.numQUANTITY.Location = new System.Drawing.Point(190, 259);
-            this.numQUANTITY.Name = "numQUANTITY";
-            this.numQUANTITY.Size = new System.Drawing.Size(120, 34);
-            this.numQUANTITY.TabIndex = 15;
-            // 
-            // msktxtYEAR
-            // 
-            this.msktxtYEAR.BackColor = System.Drawing.Color.Lavender;
-            this.msktxtYEAR.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.msktxtYEAR.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.msktxtYEAR.Location = new System.Drawing.Point(167, 208);
-            this.msktxtYEAR.Name = "msktxtYEAR";
-            this.msktxtYEAR.Size = new System.Drawing.Size(205, 34);
-            this.msktxtYEAR.TabIndex = 14;
-            // 
-            // txtSELL
-            // 
-            this.txtSELL.BackColor = System.Drawing.Color.Lavender;
-            this.txtSELL.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSELL.Location = new System.Drawing.Point(162, 377);
-            this.txtSELL.Name = "txtSELL";
-            this.txtSELL.Size = new System.Drawing.Size(210, 35);
-            this.txtSELL.TabIndex = 11;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(3, 380);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(166, 29);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Satış Fiyatı:";
-            // 
-            // txtBUY
-            // 
-            this.txtBUY.BackColor = System.Drawing.Color.Lavender;
-            this.txtBUY.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtBUY.Location = new System.Drawing.Point(162, 317);
-            this.txtBUY.Name = "txtBUY";
-            this.txtBUY.Size = new System.Drawing.Size(211, 35);
-            this.txtBUY.TabIndex = 9;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(21, 320);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(148, 29);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Alış Fiyatı:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(119, 209);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 29);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Yıl:";
-            // 
-            // txtMODEL
-            // 
-            this.txtMODEL.BackColor = System.Drawing.Color.Lavender;
-            this.txtMODEL.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtMODEL.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtMODEL.Location = new System.Drawing.Point(167, 150);
-            this.txtMODEL.Name = "txtMODEL";
-            this.txtMODEL.Size = new System.Drawing.Size(205, 35);
-            this.txtMODEL.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(74, 152);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 29);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Model:";
-            // 
-            // txtBRAND
-            // 
-            this.txtBRAND.BackColor = System.Drawing.Color.Lavender;
-            this.txtBRAND.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtBRAND.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtBRAND.Location = new System.Drawing.Point(167, 91);
-            this.txtBRAND.Name = "txtBRAND";
-            this.txtBRAND.Size = new System.Drawing.Size(205, 35);
-            this.txtBRAND.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(72, 90);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 29);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Marka:";
-            // 
-            // txtNAME
-            // 
-            this.txtNAME.BackColor = System.Drawing.Color.Lavender;
-            this.txtNAME.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtNAME.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtNAME.Location = new System.Drawing.Point(167, 36);
-            this.txtNAME.Name = "txtNAME";
-            this.txtNAME.Size = new System.Drawing.Size(205, 35);
-            this.txtNAME.TabIndex = 1;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.Location = new System.Drawing.Point(40, 35);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(134, 29);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Ürün adı:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(40, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Ürün adı:";
             // 
             // dataGridView1
             // 
@@ -426,39 +220,34 @@ namespace Stock_Control_DesktopApp.AllChildPanels
             // 
             this.tBL_PRODUCTSTableAdapter.ClearBeforeFill = true;
             // 
-            // addBTN
+            // panel1
             // 
-            this.addBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(70)))));
-            this.addBTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.addBTN.FlatAppearance.BorderSize = 2;
-            this.addBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.addBTN.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.addBTN.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.addBTN.Location = new System.Drawing.Point(96, 663);
-            this.addBTN.Name = "addBTN";
-            this.addBTN.Size = new System.Drawing.Size(245, 62);
-            this.addBTN.TabIndex = 23;
-            this.addBTN.Text = "Ekle";
-            this.addBTN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.addBTN.UseVisualStyleBackColor = false;
-            // 
-            // updtBTN
-            // 
-            this.updtBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(70)))));
-            this.updtBTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.updtBTN.FlatAppearance.BorderSize = 2;
-            this.updtBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.updtBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.updtBTN.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.updtBTN.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.updtBTN.Location = new System.Drawing.Point(96, 731);
-            this.updtBTN.Name = "updtBTN";
-            this.updtBTN.Size = new System.Drawing.Size(245, 55);
-            this.updtBTN.TabIndex = 24;
-            this.updtBTN.Text = "Güncelle";
-            this.updtBTN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.updtBTN.UseVisualStyleBackColor = false;
+            this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.panel1.Controls.Add(this.dltBTN);
+            this.panel1.Controls.Add(this.idkeeper);
+            this.panel1.Controls.Add(this.updtBTN);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.addBTN);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.richDSCRB);
+            this.panel1.Controls.Add(this.numQUANTITY);
+            this.panel1.Controls.Add(this.msktxtYEAR);
+            this.panel1.Controls.Add(this.txtSELL);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.txtBUY);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.txtMODEL);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.txtBRAND);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.txtNAME);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(1465, 1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(395, 881);
+            this.panel1.TabIndex = 3;
             // 
             // dltBTN
             // 
@@ -469,7 +258,7 @@ namespace Stock_Control_DesktopApp.AllChildPanels
             this.dltBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.dltBTN.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dltBTN.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.dltBTN.Location = new System.Drawing.Point(96, 792);
+            this.dltBTN.Location = new System.Drawing.Point(87, 797);
             this.dltBTN.Name = "dltBTN";
             this.dltBTN.Size = new System.Drawing.Size(245, 54);
             this.dltBTN.TabIndex = 25;
@@ -477,30 +266,240 @@ namespace Stock_Control_DesktopApp.AllChildPanels
             this.dltBTN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.dltBTN.UseVisualStyleBackColor = false;
             // 
+            // idkeeper
+            // 
+            this.idkeeper.AutoSize = true;
+            this.idkeeper.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.idkeeper.Location = new System.Drawing.Point(312, 0);
+            this.idkeeper.Name = "idkeeper";
+            this.idkeeper.Size = new System.Drawing.Size(80, 19);
+            this.idkeeper.TabIndex = 20;
+            this.idkeeper.Text = "idkeeper";
+            this.idkeeper.Visible = false;
+            // 
+            // updtBTN
+            // 
+            this.updtBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(70)))));
+            this.updtBTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.updtBTN.FlatAppearance.BorderSize = 2;
+            this.updtBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.updtBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.updtBTN.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.updtBTN.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.updtBTN.Location = new System.Drawing.Point(87, 736);
+            this.updtBTN.Name = "updtBTN";
+            this.updtBTN.Size = new System.Drawing.Size(245, 55);
+            this.updtBTN.TabIndex = 24;
+            this.updtBTN.Text = "Güncelle";
+            this.updtBTN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.updtBTN.UseVisualStyleBackColor = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label10.Location = new System.Drawing.Point(91, 261);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(83, 29);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "Adet:";
+            // 
+            // addBTN
+            // 
+            this.addBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(70)))));
+            this.addBTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.addBTN.FlatAppearance.BorderSize = 2;
+            this.addBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.addBTN.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.addBTN.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.addBTN.Location = new System.Drawing.Point(87, 668);
+            this.addBTN.Name = "addBTN";
+            this.addBTN.Size = new System.Drawing.Size(245, 62);
+            this.addBTN.TabIndex = 23;
+            this.addBTN.Text = "Ekle";
+            this.addBTN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.addBTN.UseVisualStyleBackColor = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label8.Location = new System.Drawing.Point(21, 429);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(100, 29);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "Detay:";
+            // 
+            // richDSCRB
+            // 
+            this.richDSCRB.BackColor = System.Drawing.Color.Lavender;
+            this.richDSCRB.Location = new System.Drawing.Point(17, 461);
+            this.richDSCRB.Name = "richDSCRB";
+            this.richDSCRB.Size = new System.Drawing.Size(368, 181);
+            this.richDSCRB.TabIndex = 16;
+            this.richDSCRB.Text = "";
+            // 
+            // numQUANTITY
+            // 
+            this.numQUANTITY.BackColor = System.Drawing.Color.Lavender;
+            this.numQUANTITY.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.numQUANTITY.Location = new System.Drawing.Point(190, 259);
+            this.numQUANTITY.Name = "numQUANTITY";
+            this.numQUANTITY.Size = new System.Drawing.Size(120, 34);
+            this.numQUANTITY.TabIndex = 15;
+            // 
+            // msktxtYEAR
+            // 
+            this.msktxtYEAR.BackColor = System.Drawing.Color.Lavender;
+            this.msktxtYEAR.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.msktxtYEAR.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.msktxtYEAR.Location = new System.Drawing.Point(167, 208);
+            this.msktxtYEAR.Name = "msktxtYEAR";
+            this.msktxtYEAR.Size = new System.Drawing.Size(205, 34);
+            this.msktxtYEAR.TabIndex = 14;
+            // 
+            // txtSELL
+            // 
+            this.txtSELL.BackColor = System.Drawing.Color.Lavender;
+            this.txtSELL.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSELL.Location = new System.Drawing.Point(162, 377);
+            this.txtSELL.Name = "txtSELL";
+            this.txtSELL.Size = new System.Drawing.Size(210, 35);
+            this.txtSELL.TabIndex = 11;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Location = new System.Drawing.Point(3, 380);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(166, 29);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Satış Fiyatı:";
+            // 
+            // txtBUY
+            // 
+            this.txtBUY.BackColor = System.Drawing.Color.Lavender;
+            this.txtBUY.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtBUY.Location = new System.Drawing.Point(162, 317);
+            this.txtBUY.Name = "txtBUY";
+            this.txtBUY.Size = new System.Drawing.Size(211, 35);
+            this.txtBUY.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(21, 320);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(148, 29);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Alış Fiyatı:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(119, 209);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(55, 29);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Yıl:";
+            // 
+            // txtMODEL
+            // 
+            this.txtMODEL.BackColor = System.Drawing.Color.Lavender;
+            this.txtMODEL.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtMODEL.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtMODEL.Location = new System.Drawing.Point(167, 150);
+            this.txtMODEL.Name = "txtMODEL";
+            this.txtMODEL.Size = new System.Drawing.Size(205, 35);
+            this.txtMODEL.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(74, 152);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 29);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Model:";
+            // 
+            // txtBRAND
+            // 
+            this.txtBRAND.BackColor = System.Drawing.Color.Lavender;
+            this.txtBRAND.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtBRAND.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtBRAND.Location = new System.Drawing.Point(167, 91);
+            this.txtBRAND.Name = "txtBRAND";
+            this.txtBRAND.Size = new System.Drawing.Size(205, 35);
+            this.txtBRAND.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(72, 90);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(102, 29);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Marka:";
+            // 
+            // txtNAME
+            // 
+            this.txtNAME.BackColor = System.Drawing.Color.Lavender;
+            this.txtNAME.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtNAME.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtNAME.Location = new System.Drawing.Point(167, 36);
+            this.txtNAME.Name = "txtNAME";
+            this.txtNAME.Size = new System.Drawing.Size(205, 35);
+            this.txtNAME.TabIndex = 1;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label9.Location = new System.Drawing.Point(40, 35);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(134, 29);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Ürün adı:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(40, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(134, 29);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Ürün adı:";
+            // 
             // product
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1862, 884);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "product";
             this.Text = "product";
             this.Load += new System.EventHandler(this.product_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numQUANTITY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLPRODUCTSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBbusinessDataSet)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numQUANTITY)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private DBbusinessDataSet dBbusinessDataSet;
         private System.Windows.Forms.BindingSource tBLPRODUCTSBindingSource;
@@ -514,8 +513,15 @@ namespace Stock_Control_DesktopApp.AllChildPanels
         private System.Windows.Forms.DataGridViewTextBoxColumn bUYPRİCEDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sELLPRİCEDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dETAILDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TextBox txtNAME;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button dltBTN;
+        private System.Windows.Forms.Label idkeeper;
+        private System.Windows.Forms.Button updtBTN;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button addBTN;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.RichTextBox richDSCRB;
+        private System.Windows.Forms.NumericUpDown numQUANTITY;
         private System.Windows.Forms.MaskedTextBox msktxtYEAR;
         private System.Windows.Forms.TextBox txtSELL;
         private System.Windows.Forms.Label label6;
@@ -526,14 +532,8 @@ namespace Stock_Control_DesktopApp.AllChildPanels
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtBRAND;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown numQUANTITY;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.RichTextBox richDSCRB;
+        private System.Windows.Forms.TextBox txtNAME;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label idkeeper;
-        private System.Windows.Forms.Button addBTN;
-        private System.Windows.Forms.Button updtBTN;
-        private System.Windows.Forms.Button dltBTN;
+        private System.Windows.Forms.Label label1;
     }
 }

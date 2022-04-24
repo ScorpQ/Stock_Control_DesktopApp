@@ -35,7 +35,7 @@ namespace Stock_Control_Manager
         {
             sqlcon CONNECT = new sqlcon();
             DataTable DT = new DataTable();
-            SqlDataAdapter DA = new SqlDataAdapter("select * from TBL_PRODUCTS", CONNECT.connection()); 
+            SqlDataAdapter DA = new SqlDataAdapter(query, CONNECT.connection()); 
             DA.Fill(DT);
             grid.DataSource = DT;
         }

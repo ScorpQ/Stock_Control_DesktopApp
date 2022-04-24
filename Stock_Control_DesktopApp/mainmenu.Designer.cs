@@ -241,6 +241,7 @@ namespace Stock_Control_DesktopApp
             this.cstrmBTN.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cstrmBTN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.cstrmBTN.UseVisualStyleBackColor = false;
+            this.cstrmBTN.Click += new System.EventHandler(this.cstrmBTN_Click);
             // 
             // staffBTN
             // 

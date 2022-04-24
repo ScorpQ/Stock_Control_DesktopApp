@@ -19,6 +19,7 @@ namespace Stock_Control_DesktopApp
     public partial class mainmenu : Form
     {
         product PRDCT;
+        customer CSTRM;
 
         public mainmenu()
         {
@@ -34,6 +35,15 @@ namespace Stock_Control_DesktopApp
             PRDCT.Show();
         }
 
+        private void cstrmBTN_Click(object sender, EventArgs e)
+        {
+            monitorPanel.Controls.Clear();
+            CSTRM = new customer();
+            CSTRM.TopLevel = false;
+            monitorPanel.Controls.Add(CSTRM);
+            CSTRM.Show();
+        } 
+        
         private void exitBTN_Click(object sender, EventArgs e)
         {
             Application.Exit();
