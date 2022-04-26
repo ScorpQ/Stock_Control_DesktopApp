@@ -66,6 +66,9 @@ namespace Stock_Control_DesktopApp.AllChildPanels
 
             // table 
             FB.listAll(query, dataGridView1);
+
+            //default olarak radio1 true gelsin. -detay için Line 185-.
+            radio1.Checked = true;
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -181,7 +184,29 @@ namespace Stock_Control_DesktopApp.AllChildPanels
 
         private void radio1_CheckedChanged(object sender, EventArgs e)
         {
-            richTextBox2.Text = "devam :)";
+            //Firma kodlarının açıklamaları.
+            CMD = new SqlCommand("select * from TBL_CODES",CONNECT.connection());
+            DR = CMD.ExecuteReader();
+            if (DR.Read())
+                richTextBox2.Text = DR[0].ToString();
+        }
+
+        private void radio2_CheckedChanged(object sender, EventArgs e)
+        {
+            //Firma kodlarının açıklamaları.
+            CMD = new SqlCommand("select * from TBL_CODES",CONNECT.connection());
+            DR = CMD.ExecuteReader();
+            if (DR.Read())
+                richTextBox2.Text = DR[1].ToString();
+        }
+
+        private void radio3_CheckedChanged(object sender, EventArgs e)
+        {
+            //Firma kodlarının açıklamaları.
+            CMD = new SqlCommand("select * from TBL_CODES", CONNECT.connection());
+            DR = CMD.ExecuteReader();
+            if (DR.Read())
+                richTextBox2.Text = DR[2].ToString();
         }
     }
 }
