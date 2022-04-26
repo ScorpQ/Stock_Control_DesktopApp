@@ -38,6 +38,7 @@ namespace Stock_Control_Manager
             SqlDataAdapter DA = new SqlDataAdapter(query, CONNECT.connection()); 
             DA.Fill(DT);
             grid.DataSource = DT;
+            CONNECT.connection().Close();
         }
 
 

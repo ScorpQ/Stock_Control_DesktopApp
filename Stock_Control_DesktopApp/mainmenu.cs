@@ -20,6 +20,7 @@ namespace Stock_Control_DesktopApp
     {
         product PRDCT;
         customer CSTRM;
+        firm FRM;
 
         public mainmenu()
         {
@@ -43,11 +44,21 @@ namespace Stock_Control_DesktopApp
             monitorPanel.Controls.Add(CSTRM);
             CSTRM.Show();
         } 
-        
+       
+        private void frmBTN_Click(object sender, EventArgs e)
+        {
+            monitorPanel.Controls.Clear();
+            FRM = new firm();
+            FRM.TopLevel = false;
+            monitorPanel.Controls.Add(FRM);
+            FRM.Show();
+        }
+
         private void exitBTN_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+    
     }
 }
 

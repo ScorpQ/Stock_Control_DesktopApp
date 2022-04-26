@@ -98,6 +98,8 @@ namespace Stock_Control_DesktopApp.AllChildPanels
 
             // Ekleme işleminden sonra bileşenleri temizler. Detay için 26. satıra git.
             Clear();
+
+            // reflesh table
             FB.listAll(query,dataGridView1);
         }
 
@@ -120,12 +122,14 @@ namespace Stock_Control_DesktopApp.AllChildPanels
 
             // Güncelleme işleminden sonra bileşenleri temizler. Detay için 26. satıra git.
             Clear();
+
+            // reflesh table
             FB.listAll(query, dataGridView1);
         }
 
         private void dltBTN_Click(object sender, EventArgs e)
         {
-            // silmeden önce MessageBox ile emin misin diye sor.
+            // silmeden önce MessageBox ile yes/or sorusu.
             DialogResult dialogResult = MessageBox.Show("Musteriyi silmek istediginden emin misin?", "Onayla", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
@@ -137,6 +141,8 @@ namespace Stock_Control_DesktopApp.AllChildPanels
 
             // Güncelleme işleminden sonra bileşenleri temizler. Detay için 26. satıra git.
             Clear();
+
+            // reflesh table
             FB.listAll(query, dataGridView1);
         }
 

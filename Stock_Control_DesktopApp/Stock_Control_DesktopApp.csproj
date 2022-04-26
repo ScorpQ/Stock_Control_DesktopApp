@@ -33,8 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Data.Desktop.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,6 +51,8 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AllChildPanels\customer.cs">
@@ -51,6 +60,12 @@
     </Compile>
     <Compile Include="AllChildPanels\customer.Designer.cs">
       <DependentUpon>customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllChildPanels\firm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllChildPanels\firm.Designer.cs">
+      <DependentUpon>firm.cs</DependentUpon>
     </Compile>
     <Compile Include="AllChildPanels\junk.cs">
       <SubType>Form</SubType>
@@ -81,6 +96,9 @@
     <Compile Include="sqlcon.cs" />
     <EmbeddedResource Include="AllChildPanels\customer.resx">
       <DependentUpon>customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllChildPanels\firm.resx">
+      <DependentUpon>firm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AllChildPanels\junk.resx">
       <DependentUpon>junk.cs</DependentUpon>

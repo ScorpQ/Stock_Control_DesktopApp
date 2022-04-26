@@ -223,6 +223,7 @@ namespace Stock_Control_DesktopApp
             this.frmBTN.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.frmBTN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.frmBTN.UseVisualStyleBackColor = false;
+            this.frmBTN.Click += new System.EventHandler(this.frmBTN_Click);
             // 
             // cstrmBTN
             // 

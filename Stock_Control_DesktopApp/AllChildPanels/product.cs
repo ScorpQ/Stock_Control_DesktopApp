@@ -74,7 +74,7 @@ namespace Stock_Control_DesktopApp.AllChildPanels
             CONNECT.connection().Close();
             MessageBox.Show("EKLENDİ");
 
-            //reflesh
+            //reflesh table
             FB.listAll(query, dataGridView1);
         }
 
@@ -99,7 +99,7 @@ namespace Stock_Control_DesktopApp.AllChildPanels
             CONNECT.connection().Close();
             MessageBox.Show("Güncellendi....");
 
-            // reflesh 
+            // reflesh table
             FB.listAll(query, dataGridView1);
         }
 
@@ -112,7 +112,7 @@ namespace Stock_Control_DesktopApp.AllChildPanels
             CMD.ExecuteNonQuery();
             CONNECT.connection().Close();
 
-            // reflesh 
+            // reflesh table
             FB.listAll(query, dataGridView1);
         }
     }
